@@ -13,7 +13,7 @@ public class HelloServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		resp.setContentType("text/html; charset=UTF-8");
+//		resp.setContentType("text/html; charset=UTF-8");
 		String name = req.getParameter("name");
 		if (name == null) {
 			name = "Anonymous";
@@ -28,8 +28,11 @@ public class HelloServlet extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		// 요청 데이터 인코딩 설정
+		// 요청 응답 데이터 설정을 필터로 뺀다
+//		req.setCharacterEncoding("UTF-8");
 		// 페이지 응답 설정
-		resp.setContentType("text/html; charset=UTF-8");
+//		resp.setContentType("text/html; charset=UTF-8");
 		// 파라미터 받기
 		String firstname = req.getParameter("first_name");
 		String lastname = req.getParameter("last_name");
@@ -39,7 +42,7 @@ public class HelloServlet extends HttpServlet {
 		}
 
 		PrintWriter out = resp.getWriter();
-		out.println("<h3>Hello Servlet</h3>");
+		out.println("<h3>Hello Servlet </h3>");
 		out.println("<p>이름:" + firstname + "</p>");
 		out.println("<p>성: " + lastname + "</p>");
 		
