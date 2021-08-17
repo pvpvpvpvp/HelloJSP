@@ -11,6 +11,10 @@
 	<h3>Hello HTML</h3>
 	<p>이것은 namsk가 작성한 첫번째 HTML 입니다.</p>
 	
+	<ul>
+	<li><a href="<%=request.getContextPath() %>/users?a=joinform">회원가입</a></li>
+	<li><a href="<%=request.getContextPath() %>/users?a=loginform">로그인</a></li>
+	</ul>
 	<h4>GET 전송</h4>
 	<p>
 		<a href="hs?name=Servlet">HelloServlet 호출</a>
