@@ -9,7 +9,6 @@
 EmaillistDao dao = new EmaillistDaoImpl();
 List<EmailVo> list = dao.getList();
 %>
-<%=list%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -38,19 +37,23 @@ List<EmailVo> list = dao.getList();
 		<tr>
 			<td colspan="2">
 				<!-- 삭제 폼 -->
-				<form action="<%=request.getContextPath() %>/emaillist/delete.jsp"
+				<form action="<%=request.getContextPath()%>/emaillist/delete.jsp"
 					method="POST">
-					<input type="hidden" name="no" value="<%=vo.getNo() %>" />
-					<input type="submit" value="삭제"/>
+					<input type="hidden" name="no" value="<%=vo.getNo()%>" /> <input
+						type="submit" value="삭제" />
 				</form>
 			</td>
 		</tr>
+		</table>
+		<br />
 		<%
 		}
 		%>
 		<p>
 			<a href="<%=request.getContextPath()%>/emaillist/form.jsp">추가
 				이메일등록</a>
+		</p>
+
 	</table>
 </body>
 </html>
